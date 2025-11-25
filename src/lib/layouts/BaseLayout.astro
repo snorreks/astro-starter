@@ -3,6 +3,7 @@
 import '$styles/global.css'
 import Analytics from '$components/base/Analytics.astro'
 import SEO from '$components/base/SEO.astro'
+import Footer from '$components/layout/Footer.astro'
 import Navbar from '$components/layout/Navbar.astro'
 import { site } from '$data/site-content'
 import { toLocale } from '$utils/i18n'
@@ -39,17 +40,7 @@ const currentLang = toLocale(Astro.currentLocale)
   >
     <Navbar />
 
-    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      <div
-        class={`absolute start-[10%] -top-40 aspect-[1155/678] w-[40rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-${site.colors.secondary} to-${site.colors.secondaryHover} opacity-20 blur-3xl`}
-      >
-      </div>
-      <div
-        class={`absolute end-[10%] top-[40%] aspect-[1155/678] w-[40rem] -translate-x-1/2 bg-gradient-to-tr from-${site.colors.accent} to-${site.colors.background} opacity-30 blur-3xl`}
-      >
-      </div>
-    </div>
-
     <slot />
+    <Footer />
   </body>
 </html>

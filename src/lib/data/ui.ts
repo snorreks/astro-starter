@@ -5,10 +5,6 @@ export const ui = {
     'nav.services': 'Services',
     'nav.about': 'About',
     'nav.contact': 'Contact',
-  },
-  es: {
-    'nav.services': 'Servicios',
-    'nav.about': 'Sobre',
-    'nav.contact': 'Contacto',
+    'footer.title': 'Footer',
   },
 } as const

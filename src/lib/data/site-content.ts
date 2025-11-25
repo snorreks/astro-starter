@@ -74,4 +74,7 @@ export const home = {
 export const siteContent = {
   site,
   home,
+  footer: {
+    copyright: `© ${new Date().getFullYear()} ${site.name}. All rights reserved.`,
+  },
 }

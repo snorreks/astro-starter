@@ -1,0 +1,27 @@
+---
+// src/lib/components/ui/Button.astro
+import type { HTMLAttributes } from 'astro/types'
+
+/**
+ * A simple, styled button component that renders as an anchor tag.
+ */
+type Props = HTMLAttributes<'a'> & {
+  /**
+   * The URL the button links to.
+   */
+  href: string
+}
+
+const { href, ...attrs } = Astro.props
+---
+
+<a
+  href={href}
+  class:list={[
+    'inline-block rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600',
+    attrs.class,
+  ]}
+  {...attrs}
+>
+  <slot />
+</a>
