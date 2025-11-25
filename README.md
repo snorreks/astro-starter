@@ -4,10 +4,29 @@ This is a professional, scalable, and high-performance Astro starter template de
 
 **Core Philosophy:**
 
-- **Modular Architecture:** Code is organized into distinct, reusable components.
-- **Strictly Typed:** TypeScript in strict mode ensures code quality and maintainability.
-- **Self-Documenting:** JSDoc is mandatory for all component props.
-- **Separation of Concerns:** A clear distinction between data, UI, and application logic.
+- **Modular Architecture**: Code is organized into distinct, reusable components.
+- **Strictly Typed**: TypeScript in strict mode ensures code quality and maintainability.
+- **Self-Documenting**: JSDoc is mandatory for all component props.
+- **Separation of Concerns**: A clear distinction between data, UI, and application logic.
+
+## Table of Contents
+- [Project Structure](#project-structure)
+- [Project Setup](#project-setup)
+  - [1. Firebase Project](#1-firebase-project)
+  - [2. Site Content](#2-site-content)
+  - [3. Branding](#3-branding)
+    - [Logo](#logo)
+    - [Favicons](#favicons)
+    - [Social Preview Image](#social-preview-image)
+  - [4. Environment Variables](#4-environment-variables)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- [Testing](#testing)
+- [Building and Deploying](#building-and-deploying)
+- [CI/CD (GitHub Actions)](#cicd-github-actions)
+  - [Configuring Secrets](#configuring-secrets)
+- [AI-Assisted Development with Gemini CLI](#ai-assisted-development-with-gemini-cli)
+  - [Using Playwright MCP with Gemini CLI](#using-playwright-mcp-with-gemini-cli)
 
 ## Project Structure
 
@@ -138,6 +157,27 @@ The application is configured for deployment to **Firebase Hosting**.
     ```
 
 You can also run both steps with a single command: `pnpm build-deploy`.
+
+## CI/CD (GitHub Actions)
+
+This project comes with a pre-configured GitHub Actions workflow located in .github/workflows/playwright.yml. It handles:
+
+1. Build Verification: Ensures the project compiles correctly.
+2. E2E Testing: Runs Playwright tests against the production build.
+3. Caching: Caches pnpm dependencies and Playwright browsers for faster CI runs.
+
+### Configuring Secrets
+
+Since the build process requires environment variables (like Google Analytics), you must add them to your GitHub Repository Secrets for the Action to pass.
+
+1. Go to your GitHub Repository.
+2. Navigate to Settings > Secrets and variables > Actions.
+3. Click New repository secret.
+4. Add the following secrets:
+
+- GOOGLE_ANALYTICS_ID: Your GA Measurement ID (e.g., G-XXXXXXX).
+
+  Note: If you add more environment variables to .env, remember to add them to GitHub Secrets and update the .github/workflows/playwright.yml file to expose them to the build step.
 
 ## AI-Assisted Development with Gemini CLI
 
