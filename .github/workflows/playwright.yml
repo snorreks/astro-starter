@@ -1,4 +1,5 @@
-name: Playwright Tests
+name: CI/CD Pipeline
+
 on:
   push:
     branches: [main, master]
@@ -6,8 +7,33 @@ on:
     branches: [main, master]
 
 jobs:
-  # JOB 1: BUILD
-  # This job focuses solely on checking if the code compiles.
+  # JOB 1: QUALITY CHECK (Linting, Formatting, Type Checking)
+  # Runs in parallel with Build
+  quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # This runs your "validate" script: Prettier + ESLint + Astro Check
+      - name: Run Validation
+        # We add the secret here just in case Astro Check needs to validate env schema
+        env:
+          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+        run: pnpm validate
+
+  # JOB 2: BUILD
+  # Runs in parallel with Quality
   build:
     name: Build Project
     runs-on: ubuntu-latest
@@ -24,7 +50,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # FIXED STEP
       - name: Build Astro Site
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
@@ -37,11 +62,12 @@ jobs:
           path: dist/
           retention-days: 1
 
-  # JOB 2: TEST
-  # This job only runs if 'build' succeeds (needs: build)
+  # JOB 3: E2E TEST
+  # Only runs if BOTH Quality and Build succeed
   test:
     name: E2E Tests
-    needs: build # <--- This ensures we don't start unless Build passes
+    # This needs array is the magic sauce:
+    needs: [quality, build]
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
@@ -54,12 +80,9 @@ jobs:
           node-version: lts/*
           cache: 'pnpm'
 
-      # We still need to install dependencies to run the 'playwright' binary
-      # Since we use 'cache: pnpm' above, this will be nearly instant.
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # Restore the built site from the previous job
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
         with:

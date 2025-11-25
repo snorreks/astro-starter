@@ -13,7 +13,7 @@ export const site = {
     country: 'USA',
   },
   social: {
-    twitter: '@yourhandle',
+    twitter: 'https://twitter.com/yourhandle',
     instagram: 'https://www.instagram.com/yourhandle',
     youtube: 'https://www.youtube.com/yourhandle',
   },

@@ -1,3 +1,5 @@
+<!--README.md-->
+
 # Astro Starter Template
 
 This is a professional, scalable, and high-performance Astro starter template designed for 10x Engineers. It follows a strict, modular architecture inspired by SvelteKit, emphasizing a clear separation of concerns (Data vs. View vs. Logic).
@@ -10,6 +12,7 @@ This is a professional, scalable, and high-performance Astro starter template de
 - **Separation of Concerns**: A clear distinction between data, UI, and application logic.
 
 ## Table of Contents
+
 - [Project Structure](#project-structure)
 - [Project Setup](#project-setup)
   - [1. Firebase Project](#1-firebase-project)
@@ -82,7 +85,7 @@ Create a `logo.png` file and place it in `src/lib/assets/icons/logo.png`.
 
 #### Social Preview Image
 
-Create a `social_preview_image.png` (1200x630px is a good size) and place it in the `public/` directory. This image will be used for social media previews.
+Create a `social_preview_image.jpg` (1200x630px is a good size) and place it in the `public/` directory. This image will be used for social media previews.
 
 ### 4. Environment Variables
 
