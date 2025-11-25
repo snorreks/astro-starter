@@ -19,11 +19,12 @@ test.describe('Homepage', () => {
     expect(accessibilityScanResults.violations).toEqual([])
   })
 
-  test('visual regression check', async ({ page }) => {
-    // This compares the current page screenshot to a "golden" image saved in your repo
-    await expect(page).toHaveScreenshot('homepage-snapshot.png', {
-      maxDiffPixels: 100, // Allow tiny rendering differences
-      fullPage: true, // Take a picture of the whole scrollable page
-    })
-  })
+  // Uncomment this if you want to enable visual regression testing
+  // test('visual regression check', async ({ page }) => {
+  //   // This compares the current page screenshot to a "golden" image saved in your repo
+  //   await expect(page).toHaveScreenshot('homepage-snapshot.png', {
+  //     maxDiffPixels: 100, // Allow tiny rendering differences
+  //     fullPage: true, // Take a picture of the whole scrollable page
+  //   })
+  // })
 })

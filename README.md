@@ -51,15 +51,18 @@ All site-specific data (like your name, social media links, and project details)
 ### 3. Branding
 
 #### Logo
+
 Create a `logo.png` file and place it in `src/lib/assets/icons/logo.png`.
 
 #### Favicons
+
 1. Go to a favicon generator service like [favicon.io](https://favicon.io/).
 2. Generate the favicons using your `logo.png`.
 3. Replace the existing favicon files in the `public/` directory with the newly generated ones.
 4. Update the `name` and `short_name` in `public/site.webmanifest` to match your website's name.
 
 #### Social Preview Image
+
 Create a `social_preview_image.png` (1200x630px is a good size) and place it in the `public/` directory. This image will be used for social media previews.
 
 ### 4. Environment Variables
