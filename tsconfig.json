@@ -1,0 +1,19 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "baseUrl": "src",
+    "paths": {
+      "$assets/*": ["lib/assets/*"],
+      "$components/*": ["lib/components/*"],
+      "$views/*": ["lib/views/*"],
+      "$layouts/*": ["lib/layouts/*"],
+      "$styles/*": ["lib/styles/*"],
+      "$utils/*": ["lib/utils/*"],
+      "$data/*": ["lib/data/*"],
+      "$types": ["lib/types"]
+    }
+  },
+  "include": [".astro/types.d.ts", "src", "astro.config.ts", "eslint.config.ts", "prettier.config.ts"],
+  "exclude": ["dist"]
+}

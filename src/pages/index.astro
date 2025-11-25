@@ -1,0 +1,14 @@
+---
+// src/pages/index.astro
+
+import { siteContent } from '$data/site-content'
+import BaseLayout from '$layouts/BaseLayout.astro'
+import HomeView from '$views/Home.astro'
+---
+
+<BaseLayout
+  title={`${siteContent.site.name} | ${siteContent.site.description}`}
+  description={siteContent.site.description}
+>
+  <HomeView content={siteContent.home} />
+</BaseLayout>

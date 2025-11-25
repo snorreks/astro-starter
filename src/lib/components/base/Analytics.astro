@@ -1,0 +1,33 @@
+---
+// src/lib/components/base/Analytics.astro
+//
+// https://daniel.es/blog/the-ultimate-astro-google-analytics-guide/
+import { GOOGLE_ANALYTICS_ID } from 'astro:env/client'
+
+if (!GOOGLE_ANALYTICS_ID) {
+  throw new Error('GOOGLE_ANALYTICS_ID is not set')
+}
+
+const url = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`
+---
+
+<!-- Google tag (gtag.js) -->
+<script src={url} is:inline></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || []
+  function gtag(...args) {
+    dataLayer.push(args)
+  }
+
+  gtag('js', new Date())
+
+  // To be GDPR complaint and also not to give the users annoying banners we make all users anonymous
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+  })
+
+  gtag('config', GOOGLE_ANALYTICS_ID)
+</script>

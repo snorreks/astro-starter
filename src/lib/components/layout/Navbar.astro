@@ -1,0 +1,64 @@
+---
+import logo from '$assets/icons/logo.png'
+import LanguageSelector from '$components/layout/LanguageSelector.astro'
+import Picture from '$components/ui/Picture.astro'
+import { site } from '$data/site-content'
+import { getLangFromUrl, useTranslations } from '$utils/i18n'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+---
+
+<header class="absolute inset-x-0 top-0 z-50">
+  <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+    <div class="flex lg:flex-1">
+      <a href="/" title={`${site.name} Home`} class="-m-1.5 p-1.5">
+        <span class="sr-only">{site.name}</span>
+        <Picture src={logo} alt={`${site.name} Logo`} quality="low" class="h-8 w-auto" />
+      </a>
+    </div>
+
+    <div class="hidden items-center lg:flex lg:gap-x-12">
+      <a
+        href="#services"
+        title={t('nav.services')}
+        class="text-sm leading-6 font-semibold text-gray-100 transition-colors hover:text-indigo-500"
+      >
+        {t('nav.services')}
+      </a>
+      <a
+        href="#about"
+        title={t('nav.about')}
+        class="text-sm leading-6 font-semibold text-gray-100 transition-colors hover:text-indigo-500"
+      >
+        {t('nav.about')}
+      </a>
+      <a
+        href="#contact"
+        title={t('nav.contact')}
+        class="text-sm leading-6 font-semibold text-gray-100 transition-colors hover:text-indigo-500"
+      >
+        {t('nav.contact')}
+      </a>
+      <LanguageSelector />
+    </div>
+
+    <div class="hidden gap-4 lg:flex lg:flex-1 lg:justify-end">
+      {
+        Object.values(site.social).map((socialUrl, index) => {
+          const platform = Object.keys(site.social)[index]
+          return (
+            <a
+              href={socialUrl}
+              target="_blank"
+              title={`Follow us on ${platform}`}
+              class="text-sm leading-6 font-semibold text-gray-100 capitalize transition-colors hover:text-indigo-500"
+            >
+              {platform} <span aria-hidden="true">&rarr;</span>
+            </a>
+          )
+        })
+      }
+    </div>
+  </nav>
+</header>

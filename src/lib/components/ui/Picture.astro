@@ -1,0 +1,15 @@
+---
+// src/lib/components/ui/Picture.astro
+
+import type { ComponentProps } from 'astro/types'
+
+import { Picture as PictureComponent } from 'astro:assets'
+
+type Props = ComponentProps<typeof PictureComponent> & {
+  alt: string
+}
+
+const { quality = 80, formats = ['avif', 'webp'], ...rest } = Astro.props
+---
+
+<PictureComponent formats={formats} quality={quality} {...rest} />

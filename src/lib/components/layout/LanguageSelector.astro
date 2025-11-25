@@ -1,0 +1,60 @@
+---
+import type { Language } from '$types'
+
+// src/lib/components/layout/LanguageSelector.astro
+import { languages, toLocale } from '$utils/i18n'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+
+const currentLang = toLocale(Astro.currentLocale)
+
+// Logic to get the current path without the locale prefix
+// e.g. "/ar/services" becomes "services" so we can switch to "/en/services"
+const currentPath = Astro.url.pathname.replace(new RegExp(`^/${currentLang}`), '').replace(/^\//, '')
+---
+
+<div class="group relative z-50 inline-block text-start">
+  <button
+    type="button"
+    class="inline-flex w-full items-center justify-between gap-2 rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-gray-700 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:outline-none"
+  >
+    <span class="flex items-center gap-2">
+      <span role="img" aria-label={languages[currentLang].label}>
+        {languages[currentLang].flag}
+      </span>
+      <span class="uppercase">{currentLang}</span>
+    </span>
+    <svg
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-4 w-4 text-gray-400 transition-transform group-hover:rotate-180 group-hover:text-white"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+        fill-rule="evenodd"></path>
+    </svg>
+  </button>
+
+  <div
+    class="invisible absolute start-0 mt-2 w-40 rounded-md bg-gray-800 opacity-0 shadow-lg ring-1 ring-black/5 transition-all duration-200 group-hover:visible group-hover:opacity-100 focus:outline-none"
+  >
+    <div class="py-1">
+      {
+        (Object.values(languages) as Language[]).map((lang) => (
+          <a
+            href={getRelativeLocaleUrl(lang.code, currentPath)}
+            title={lang.label}
+            class:list={[
+              'flex items-center gap-3 px-4 py-2 text-sm transition-colors hover:bg-gray-700',
+              currentLang === lang.code ? 'bg-gray-700/50 font-bold text-red-400' : 'text-gray-200',
+            ]}
+          >
+            <span class="text-lg">{lang.flag}</span>
+            <span>{lang.label}</span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>

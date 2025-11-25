@@ -1,0 +1,55 @@
+---
+// src/lib/layouts/BaseLayout.astro
+import '$styles/global.css'
+import Analytics from '$components/base/Analytics.astro'
+import SEO from '$components/base/SEO.astro'
+import Navbar from '$components/layout/Navbar.astro'
+import { site } from '$data/site-content'
+import { toLocale } from '$utils/i18n'
+
+type Props = {
+  /**
+   * Meta description for SEO.
+   */
+  description?: string
+  image?: string
+  /**
+   * The document title for SEO.
+   */
+  title?: string
+}
+
+const { title = site.name, description = site.description, image = '/social_preview_image.png' } = Astro.props
+
+const currentLang = toLocale(Astro.currentLocale)
+---
+
+<!doctype html>
+<html
+  lang={currentLang}
+  class={`scrollbar-thumb-${site.colors.secondaryHover} scrollbar-track-${site.colors.background} h-full scroll-smooth bg-${site.colors.background}`}
+>
+  <head>
+    <SEO title={title} description={description.substring(0, 100)} image={image} />
+    {import.meta.env.PROD && <Analytics type="text/partytown" />}
+  </head>
+
+  <body
+    class={`relative h-full text-${site.colors.text} antialiased selection:bg-${site.colors.selectionBg} selection:text-${site.colors.text}`}
+  >
+    <Navbar />
+
+    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div
+        class={`absolute start-[10%] -top-40 aspect-[1155/678] w-[40rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-${site.colors.secondary} to-${site.colors.secondaryHover} opacity-20 blur-3xl`}
+      >
+      </div>
+      <div
+        class={`absolute end-[10%] top-[40%] aspect-[1155/678] w-[40rem] -translate-x-1/2 bg-gradient-to-tr from-${site.colors.accent} to-${site.colors.background} opacity-30 blur-3xl`}
+      >
+      </div>
+    </div>
+
+    <slot />
+  </body>
+</html>

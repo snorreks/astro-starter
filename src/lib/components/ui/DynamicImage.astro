@@ -1,0 +1,67 @@
+---
+// src/lib/components/ui/DynamicImage.astro
+import type { ImageMetadata, ImageQuality } from 'astro'
+import type { HTMLAttributes } from 'astro/types'
+
+import Picture from '$components/ui/Picture.astro'
+
+/**
+ * DynamicImage Component
+ * @description A component to dynamically import and display images from the assets folder.
+ */
+type Props = HTMLAttributes<'img'> & {
+  /**
+   * The alt text for the image.
+   */
+  alt: string
+
+  /**
+   * Whether to eager load the image.
+   */
+  eager?: boolean
+
+  /**
+   * The height of the image.
+   */
+  height?: number
+
+  /**
+   * The quality of the image.
+   */
+  quality?: ImageQuality
+
+  /**
+   * The path to the image within the `src/assets` directory.
+   */
+  src: string
+
+  /**
+   * The width of the image.
+   */
+  width?: number
+}
+
+const { alt, class: className, eager, src, quality, width, height, ...attrs } = Astro.props
+
+// Import all images dynamically
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif,webp,avif,svg}')
+
+// Construct the full path from the src
+const fullPath = `/src/assets/${src}`
+
+// Check if the image exists in our glob
+if (!images[fullPath]) {
+  throw new Error(`"${fullPath}" does not exist in glob: "/src/assets/**/*.{jpeg,jpg,png,gif,webp,avif,svg}"`)
+}
+---
+
+<Picture
+  width={width}
+  src={(await images[fullPath]()).default}
+  alt={alt}
+  height={height}
+  loading={eager ? 'eager' : 'lazy'}
+  quality={quality}
+  class={className}
+  {...attrs}
+/>

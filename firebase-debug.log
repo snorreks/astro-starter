@@ -1,0 +1,354 @@
+[debug] [2025-11-25T17:47:55.247Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:47:55.251Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T17:47:55.257Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.258Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.258Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.260Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.260Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.263Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.263Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.263Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.264Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.264Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.265Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.265Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.265Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.266Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.266Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.267Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.267Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.267Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.267Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.267Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.268Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.268Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.269Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.269Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.269Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.270Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.270Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.270Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.270Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.270Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.272Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.272Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.272Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.272Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.272Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.281Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.281Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.281Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.281Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.281Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.283Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.283Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.283Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.283Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.283Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.285Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:47:55.285Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T17:47:55.285Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.285Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.286Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.286Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.286Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.287Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.287Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.287Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.287Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.287Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.288Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.288Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.288Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.288Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.288Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.289Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.289Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.289Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.289Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.289Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.290Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.290Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.290Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.290Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.290Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.291Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.291Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.291Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.291Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.292Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.292Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.292Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.292Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.293Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.293Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.295Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.295Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.295Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.295Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.295Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.296Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.296Z] Checked if tokens are valid: false, expires at: 1764085563412
+[debug] [2025-11-25T17:47:55.296Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T17:47:55.296Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T17:47:55.297Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.583Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.583Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.601Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [none]
+[debug] [2025-11-25T17:47:55.601Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.604Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.604Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.612Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.612Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.614Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.614Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.622Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/storage.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.622Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/storage.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.623Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.623Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.631Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseremoteconfig.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.631Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseremoteconfig.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.634Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.634Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.641Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.641Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.643Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.643Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.650Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/storage.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.650Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/storage.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.651Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.651Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.658Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/identitytoolkit.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.658Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/identitytoolkit.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.660Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.660Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.668Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.668Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.675Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.675Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.682Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.682Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.714Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.714Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.722Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.722Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.852Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.852Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.860Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/fcm.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.860Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/fcm.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.878Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.878Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.885Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.886Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.936Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.936Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:55.943Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-11-25T17:47:55.943Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:55.995Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:55.995Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:56.002Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/identitytoolkit.googleapis.com [none]
+[debug] [2025-11-25T17:47:56.003Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/identitytoolkit.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:56.007Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:56.007Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:56.015Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseremoteconfig.googleapis.com [none]
+[debug] [2025-11-25T17:47:56.015Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseremoteconfig.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:56.065Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:56.065Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:56.072Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/fcm.googleapis.com [none]
+[debug] [2025-11-25T17:47:56.073Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/fcm.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:56.147Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:56.147Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:56.154Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [none]
+[debug] [2025-11-25T17:47:56.154Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:56.163Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T17:47:56.163Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T17:47:56.170Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-11-25T17:47:56.171Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:47:56.584Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com 403
+[debug] [2025-11-25T17:47:56.584Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [omitted]
+[debug] [2025-11-25T17:47:56.592Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/fcm.googleapis.com 200
+[debug] [2025-11-25T17:47:56.592Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/fcm.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:56.652Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com 200
+[debug] [2025-11-25T17:47:56.652Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:56.733Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/identitytoolkit.googleapis.com 200
+[debug] [2025-11-25T17:47:56.733Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/identitytoolkit.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:56.738Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseremoteconfig.googleapis.com 200
+[debug] [2025-11-25T17:47:56.738Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseremoteconfig.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:56.742Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/storage.googleapis.com 200
+[debug] [2025-11-25T17:47:56.742Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/storage.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:56.757Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-11-25T17:47:56.757Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:56.758Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com 403
+[debug] [2025-11-25T17:47:56.758Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [omitted]
+[debug] [2025-11-25T17:47:56.804Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com 200
+[debug] [2025-11-25T17:47:56.804Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:56.878Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-11-25T17:47:56.878Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:56.879Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/fcm.googleapis.com 200
+[debug] [2025-11-25T17:47:56.879Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/fcm.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:57.023Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com 200
+[debug] [2025-11-25T17:47:57.023Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:57.194Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-11-25T17:47:57.194Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:57.603Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com 200
+[debug] [2025-11-25T17:47:57.603Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:57.634Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseremoteconfig.googleapis.com 200
+[debug] [2025-11-25T17:47:57.634Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseremoteconfig.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:57.646Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/identitytoolkit.googleapis.com 200
+[debug] [2025-11-25T17:47:57.646Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/identitytoolkit.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:57.680Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-11-25T17:47:57.680Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:57.682Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/storage.googleapis.com 200
+[debug] [2025-11-25T17:47:57.682Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/storage.googleapis.com [omitted]
+[debug] [2025-11-25T17:47:57.966Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:47:57.966Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T17:47:57.967Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:47:57.967Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T17:47:58.331Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:47:58.331Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T17:47:58.331Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:47:58.332Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T17:50:54.191Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:50:54.195Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T17:50:54.205Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.205Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.206Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.206Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.207Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.207Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.220Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.220Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.220Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.220Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.221Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:50:54.221Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T17:50:54.222Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [none]
+[debug] [2025-11-25T17:50:54.223Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:50:54.225Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-11-25T17:50:54.225Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:50:54.226Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-11-25T17:50:54.227Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:50:54.228Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-11-25T17:50:54.228Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:50:54.229Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [none]
+[debug] [2025-11-25T17:50:54.229Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:50:54.232Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.232Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.232Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.232Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.233Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.233Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.235Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.235Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.235Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.235Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T17:50:54.235Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [none]
+[debug] [2025-11-25T17:50:54.235Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:50:54.237Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-11-25T17:50:54.237Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:50:54.238Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-11-25T17:50:54.238Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:50:54.240Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-11-25T17:50:54.240Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:50:54.242Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [none]
+[debug] [2025-11-25T17:50:54.242Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T17:50:54.733Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com 403
+[debug] [2025-11-25T17:50:54.733Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [omitted]
+[debug] [2025-11-25T17:50:54.734Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com 403
+[debug] [2025-11-25T17:50:54.734Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [omitted]
+[debug] [2025-11-25T17:50:54.859Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-11-25T17:50:54.859Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-11-25T17:50:54.864Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com 200
+[debug] [2025-11-25T17:50:54.864Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [omitted]
+[debug] [2025-11-25T17:50:54.870Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com 200
+[debug] [2025-11-25T17:50:54.871Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-11-25T17:50:54.963Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com 200
+[debug] [2025-11-25T17:50:54.964Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-11-25T17:50:55.416Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-11-25T17:50:55.416Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-11-25T17:50:55.503Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-11-25T17:50:55.504Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-11-25T17:50:55.584Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-11-25T17:50:55.584Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-11-25T17:50:55.734Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com 200
+[debug] [2025-11-25T17:50:55.734Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [omitted]
+[debug] [2025-11-25T17:50:56.047Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:50:56.047Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T17:50:56.049Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:50:56.049Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T17:50:57.929Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:50:57.929Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T17:50:57.931Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T17:50:57.932Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T18:10:36.528Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T18:10:36.530Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T18:10:36.535Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.536Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.536Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.536Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.537Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.537Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.544Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.544Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.544Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.544Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.544Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T18:10:36.544Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T18:10:36.546Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [none]
+[debug] [2025-11-25T18:10:36.546Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T18:10:36.547Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-11-25T18:10:36.547Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T18:10:36.548Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-11-25T18:10:36.548Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T18:10:36.549Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-11-25T18:10:36.549Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T18:10:36.550Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [none]
+[debug] [2025-11-25T18:10:36.550Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T18:10:36.552Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.552Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.552Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.552Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.552Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.552Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.554Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.554Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.554Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.554Z] Checked if tokens are valid: true, expires at: 1764096475163
+[debug] [2025-11-25T18:10:36.554Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [none]
+[debug] [2025-11-25T18:10:36.554Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T18:10:36.555Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-11-25T18:10:36.555Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T18:10:36.556Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-11-25T18:10:36.557Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T18:10:36.558Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-11-25T18:10:36.558Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T18:10:36.559Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [none]
+[debug] [2025-11-25T18:10:36.559Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com x-goog-quota-user=projects/albaniagates-d5af3
+[debug] [2025-11-25T18:10:37.198Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-11-25T18:10:37.198Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-11-25T18:10:37.199Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com 200
+[debug] [2025-11-25T18:10:37.199Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [omitted]
+[debug] [2025-11-25T18:10:37.246Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com 200
+[debug] [2025-11-25T18:10:37.246Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firestore.googleapis.com [omitted]
+[debug] [2025-11-25T18:10:37.557Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com 403
+[debug] [2025-11-25T18:10:37.557Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [omitted]
+[debug] [2025-11-25T18:10:37.619Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com 200
+[debug] [2025-11-25T18:10:37.619Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-11-25T18:10:37.694Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com 200
+[debug] [2025-11-25T18:10:37.695Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-11-25T18:10:37.696Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-11-25T18:10:37.697Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-11-25T18:10:37.721Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-11-25T18:10:37.721Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-11-25T18:10:37.993Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-11-25T18:10:37.993Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-11-25T18:10:38.054Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com 403
+[debug] [2025-11-25T18:10:38.054Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/albaniagates-d5af3/services/firebaseio.com [omitted]
+[debug] [2025-11-25T18:10:38.348Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T18:10:38.348Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T18:10:38.349Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T18:10:38.349Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T18:10:38.645Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T18:10:38.645Z] > authorizing via signed-in user (snorre@mailvideo.com)
+[debug] [2025-11-25T18:10:38.646Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T18:10:38.646Z] > authorizing via signed-in user (snorre@mailvideo.com)
