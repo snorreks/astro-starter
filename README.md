@@ -32,6 +32,46 @@ src/
 └── pages/              # The Router (Data Fetching + View Injection)
 ```
 
+## Project Setup
+
+Before running the project, you need to configure a few things.
+
+### 1. Firebase Project
+
+This project is configured for deployment to Firebase Hosting.
+
+1.  **Create a Firebase Project:** Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
+2.  **Enable Hosting:** Within your new project, navigate to the "Hosting" section and enable it.
+3.  **Update `.firebaserc`:** Open the `.firebaserc` file and replace `"firebase-project-id"` with your actual Firebase project ID.
+
+### 2. Site Content
+
+All site-specific data (like your name, social media links, and project details) is stored in `src/lib/data/site-content.ts`. Open this file and replace the placeholder values with your own information.
+
+### 3. Branding
+
+#### Logo
+Create a `logo.png` file and place it in `src/lib/assets/icons/logo.png`.
+
+#### Favicons
+1. Go to a favicon generator service like [favicon.io](https://favicon.io/).
+2. Generate the favicons using your `logo.png`.
+3. Replace the existing favicon files in the `public/` directory with the newly generated ones.
+4. Update the `name` and `short_name` in `public/site.webmanifest` to match your website's name.
+
+#### Social Preview Image
+Create a `social_preview_image.png` (1200x630px is a good size) and place it in the `public/` directory. This image will be used for social media previews.
+
+### 4. Environment Variables
+
+The project uses a `.env` file for environment variables.
+
+1.  **Create the `.env` file:**
+    ```bash
+    cp .env.example .env
+    ```
+2.  **Add your Google Analytics ID:** Open the new `.env` file and replace `G-XXXXXXXXXX` with your own Google Analytics Measurement ID. You can get this from your Google Analytics dashboard.
+
 ## Getting Started
 
 1.  **Install Dependencies:**

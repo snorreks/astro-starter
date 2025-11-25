@@ -37,7 +37,7 @@ src/
 └── pages/ # The Router (Data Fetching + View Injection)
 ├── [lang]/
 │ └── index.astro
-└── 404.astro
+└── 404.astrositeContent
 '''
 
 **Import Aliases:**
@@ -58,11 +58,13 @@ Always use aliases instead of relative paths:
 
 ### B. TypeScript & Documentation
 
-**Rule:** Strict JSDoc is **MANDATORY** for all Props.
+**Rule:** Strict JSDoc is **MANDATORY** for all Props and Functions.
+**Rule:** Always prefer `const` arrow functions over standard `function` declarations for consistency and to maintain lexical `this` scoping.
+**Rule:** Always include an explicit return type.
 **Rule:** Use `type` instead of `interface`.
 **Rule:** Use `ComponentProps` to infer types when wrapping components.
 
-**Example:**
+**Component Example:**
 '''typescript
 // src/lib/components/base/Example.astro
 import type { HTMLAttributes } from 'astro/types';
@@ -89,6 +91,22 @@ import type { HTMLAttributes } from 'astro/types';
 
 const { label, config, ...attrs } = Astro.props;
 '''
+
+**Function Example:**
+'''typescript
+// src/lib/utils/helpers.ts
+
+/\*\*
+
+- Adds two numbers together.
+- @param a - The first number.
+- @param b - The second number.
+- @returns The sum of the two numbers.
+  \*/
+  export const add = (a: number, b: number): number => {
+  return a + b;
+  };
+  '''
 
 ### C. The "View" Pattern (Model-View-Controller)
 

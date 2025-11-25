@@ -5,6 +5,7 @@
   inputs.playwright.url = "github:pietdevries94/playwright-web-flake";
 
   outputs = {
+    self,
     flake-utils,
     nixpkgs,
     playwright,

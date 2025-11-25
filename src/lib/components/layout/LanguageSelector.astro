@@ -1,8 +1,7 @@
 ---
-import type { Language } from '$types'
-
 // src/lib/components/layout/LanguageSelector.astro
-import { languages, toLocale } from '$utils/i18n'
+import { languages } from '$data/i18n'
+import { toLocale } from '$utils/i18n'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 
 const currentLang = toLocale(Astro.currentLocale)
@@ -41,7 +40,7 @@ const currentPath = Astro.url.pathname.replace(new RegExp(`^/${currentLang}`), '
   >
     <div class="py-1">
       {
-        (Object.values(languages) as Language[]).map((lang) => (
+        Object.values(languages).map((lang) => (
           <a
             href={getRelativeLocaleUrl(lang.code, currentPath)}
             title={lang.label}

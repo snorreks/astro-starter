@@ -1,26 +1,39 @@
 // src/lib/utils/i18n.ts
 import type { Locale } from '$types'
 
-import { languages, defaultLang } from '$data/i18n'
+import { languages, defaultLocale } from '$data/i18n'
 import { ui } from '$data/ui'
 
-export { defaultLang, languages }
-
-export function getLangFromUrl(url: URL) {
+/**
+ * Retrieves the language from the URL path.
+ * @param url - The URL to extract the language from.
+ * @returns The locale string.
+ */
+export const getLangFromUrl = (url: URL): Locale => {
   const [, lang] = url.pathname.split('/')
   if (lang in ui) return lang as keyof typeof ui
-  return defaultLang
+  return defaultLocale
 }
 
-export function useTranslations(lang: keyof typeof ui) {
-  return function t(key: keyof (typeof ui)[typeof defaultLang]) {
-    return ui[lang][key] || ui[defaultLang][key]
+/**
+ * Returns a translation function for a given language.
+ * @param lang - The language to use for translations.
+ * @returns A function that takes a key and returns the translated string.
+ */
+export const useTranslations = (lang: keyof typeof ui) => {
+  return (key: keyof (typeof ui)[typeof defaultLocale]): string => {
+    return ui[lang][key] || ui[defaultLocale][key]
   }
 }
 
+/**
+ * Converts a string to a valid locale, defaulting to the default locale if invalid.
+ * @param value - The string to convert to a locale.
+ * @returns The corresponding locale.
+ */
 export const toLocale = (value?: string): Locale => {
   if (!value) {
-    return defaultLang
+    return defaultLocale
   }
-  return value in languages ? (value as Locale) : defaultLang
+  return value in languages ? (value as Locale) : defaultLocale
 }

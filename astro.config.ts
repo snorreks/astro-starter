@@ -7,14 +7,7 @@ import compress from 'astro-compress'
 import robotsTxt from 'astro-robots-txt'
 import { defineConfig, envField } from 'astro/config'
 
-const LOCALES = {
-  en: 'en-US', // English (United States)
-} as const
-
-const localeKeys = Object.keys(LOCALES) as (keyof typeof LOCALES)[]
-
-const defaultLocale = 'en'
-
+import { LOCALES, defaultLocale, localeKeys } from './src/lib/data/i18n'
 import { site } from './src/lib/data/site-content'
 
 // https://astro.build/config

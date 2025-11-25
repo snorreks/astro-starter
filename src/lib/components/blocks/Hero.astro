@@ -1,12 +1,11 @@
 ---
 // src/lib/components/blocks/Hero.astro
-import type { HTMLAttributes } from 'astro/types'
 
 /**
  * Hero Component
  * @description A full-width hero section with a title, subtitle, and a call-to-action button.
  */
-type Props = HTMLAttributes<'section'> & {
+type Props = {
   /**
    * Optional: Call-to-action button properties.
    */
@@ -26,13 +25,10 @@ type Props = HTMLAttributes<'section'> & {
   title: string
 }
 
-const { title, subtitle, cta, ...attrs } = Astro.props
+const { title, subtitle, cta } = Astro.props
 ---
 
-<section
-  class="relative flex min-h-[60vh] items-center justify-center bg-gray-900 py-20 text-center text-white"
-  {...attrs}
->
+<section class="relative flex min-h-[60vh] items-center justify-center bg-gray-900 py-20 text-center text-white">
   <div class="mx-auto max-w-4xl px-6">
     <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
       {title}

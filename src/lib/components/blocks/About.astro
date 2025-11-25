@@ -1,12 +1,11 @@
 ---
 // src/lib/components/blocks/About.astro
-import type { HTMLAttributes } from 'astro/types'
 
 /**
  * About Component
  * @description A section to display information about a topic, with a title and paragraphs.
  */
-type Props = HTMLAttributes<'section'> & {
+type Props = {
   /**
    * An array of paragraphs for the content.
    */
@@ -18,10 +17,10 @@ type Props = HTMLAttributes<'section'> & {
   title: string
 }
 
-const { title, text, ...attrs } = Astro.props
+const { text, title } = Astro.props
 ---
 
-<section id="about" class="relative py-24" {...attrs}>
+<section id="about" class="relative py-24">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <h2 class="mb-6 text-3xl font-bold tracking-tight text-white sm:text-4xl">
       {title}

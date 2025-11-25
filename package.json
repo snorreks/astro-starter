@@ -12,7 +12,6 @@
     "format": "prettier --write .",
     "test:e2e": "playwright test",
     "deploy": "firebase deploy --only hosting",
-    "build-deploy": "pnpm run build && pnpm run deploy",
     "fix": "pnpm format && pnpm lint --fix && pnpm check",
     "validate": "prettier --check . && eslint . --flag unstable_native_nodejs_ts_config && astro check"
   },

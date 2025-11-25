@@ -14,7 +14,7 @@ const t = useTranslations(lang)
     <div class="flex lg:flex-1">
       <a href="/" title={`${site.name} Home`} class="-m-1.5 p-1.5">
         <span class="sr-only">{site.name}</span>
-        <Picture src={logo} alt={`${site.name} Logo`} quality="low" class="h-8 w-auto" />
+        <Picture src={logo} alt={`${site.name} Logo`} loading="eager" quality="low" class="h-8 w-auto" />
       </a>
     </div>
 
