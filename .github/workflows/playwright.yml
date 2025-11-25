@@ -4,21 +4,58 @@ on:
     branches: [main, master]
   pull_request:
     branches: [main, master]
+
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # 1. Setup PNPM correctly (better than npm i -g)
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      # 2. Setup Node with built-in pnpm caching
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
+          cache: 'pnpm'
+
+      # 3. Install dependencies (frozen-lockfile is faster/safer for CI)
       - name: Install dependencies
-        run: npm install -g pnpm && pnpm install
+        run: pnpm install --frozen-lockfile
+
+      # 4. Cache Playwright Binaries
+      # This checks the version of playwright in your lockfile.
+      # If the version hasn't changed, it restores browsers from cache
+      # saving you the download time.
+      - name: Get installed Playwright version
+        id: playwright-version
+        run: echo "PLAYWRIGHT_VERSION=$(pnpm ls @playwright/test | grep @playwright/test | sed 's/.*@playwright\/test //')" >> $GITHUB_ENV
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
+
+      # 5. Install Browsers only if cache missed
       - name: Install Playwright Browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: pnpm exec playwright install --with-deps
+
+      # 6. CRITICAL FIX: Build the Astro site
+      # This creates the 'dist/' folder that 'astro preview' needs
+      - name: Build Astro Project
+        run: pnpm build
+
+      # 7. Run Tests
       - name: Run Playwright tests
         run: pnpm exec playwright test
+
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
