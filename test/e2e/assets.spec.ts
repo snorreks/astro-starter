@@ -25,7 +25,7 @@ test.describe('Assets & Branding', () => {
       '/site.webmanifest',
       '/sitemap-index.xml',
       '/robots.txt',
-      '/social_preview_image.jpg', // Assuming you have this based on your SEO component
+      '/social_preview_image.jpg',
     ]
 
     for (const file of filesToCheck) {
