@@ -2,6 +2,7 @@
 
 export const site = {
   name: 'Astro Starter',
+  shortName: 'Astro',
   url: 'https://example.com',
   description: 'A modern Astro starter template.',
   author: 'Your Name',
@@ -30,7 +31,7 @@ export const site = {
     text: 'white',
     selectionBg: 'blue-500',
   },
-}
+};
 
 export const home = {
   hero: {
@@ -69,7 +70,7 @@ export const home = {
       title: 'Send an email',
     },
   },
-}
+};
 
 export const siteContent = {
   site,
@@ -77,4 +78,4 @@ export const siteContent = {
   footer: {
     copyright: `© ${new Date().getFullYear()} ${site.name}. All rights reserved.`,
   },
-}
+};

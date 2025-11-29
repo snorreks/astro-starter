@@ -1,0 +1,61 @@
+---
+// src/lib/layouts/BaseLayout.astro
+import '$styles/global.css';
+import Footer from '$components/layout/Footer.astro';
+import Head from '$components/layout/head/Head.astro';
+import Navbar from '$components/layout/Navbar.astro';
+import ScrollToTop from '$components/layout/ScrollToTop.astro';
+import Analytics from '$components/meta/Analytics.astro';
+import Clarity from '$components/meta/Clarity.astro';
+import { site } from '$data/site-content';
+import { GOOGLE_ANALYTICS_ID, MICROSOFT_CLARITY_ID } from 'astro:env/client';
+
+/**
+ *
+ */
+type Props = {
+  /**
+   * Meta description for SEO.
+   */
+  description?: string;
+  image?: string;
+  pagefind?: boolean;
+
+  /**
+   * The document title for SEO.
+   */
+  title?: string;
+};
+
+const { pagefind = true, title = site.name, description = site.description, image } = Astro.props;
+---
+
+<!doctype html>
+<html
+  lang="en"
+  class={`scrollbar-thumb-${site.colors.secondaryHover} scrollbar-track-${site.colors.background} h-full scroll-smooth bg-${site.colors.background}`}
+>
+  <head>
+    <Head title={title} description={description.slice(0, 100)} image={image} />
+    {import.meta.env.PROD && GOOGLE_ANALYTICS_ID && <Analytics id={GOOGLE_ANALYTICS_ID} />}
+    {import.meta.env.PROD && MICROSOFT_CLARITY_ID && <Clarity id={MICROSOFT_CLARITY_ID} />}
+  </head>
+
+  <body
+    class="flex min-h-dvh flex-col bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-50"
+  >
+    <Navbar />
+
+    <main class="flex-1" {...pagefind ? { 'data-pagefind-body': '' } : {}}>
+      <slot />
+    </main>
+
+    <Footer />
+    <ScrollToTop />
+  </body>
+</html>
+
+<script>
+  import { animateOnScroll } from '$client/animate-on-scroll';
+  animateOnScroll();
+</script>

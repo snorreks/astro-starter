@@ -1,0 +1,84 @@
+---
+// src/lib/components/layout/head/Head.astro
+import { site } from '$data/site-content';
+
+import Favicons from './Favicons.astro';
+import Schema from './Schema.astro';
+import Socials from './Socials.astro';
+
+/**
+ *
+ */
+type Props = {
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+  publishDate?: string;
+  title?: string;
+  type?: 'website' | 'article';
+  updateDate?: string;
+};
+
+const {
+  title = site.name,
+  description = site.description,
+  image = '/images/site_image.jpg', // Default fallback image
+  type = 'website',
+  publishDate,
+  updateDate,
+  noindex = false,
+} = Astro.props;
+
+// 1. Construct Absolute URLs (Critical for SEO)
+const siteUrl = Astro.site?.toString() ?? site.url;
+// Ensure image doesn't have double slashes
+const cleanImage = image.startsWith('/') ? image.slice(1) : image;
+const absoluteImageUrl = new URL(cleanImage, siteUrl).toString();
+const canonicalURL = new URL(Astro.url.pathname, siteUrl).toString();
+
+// 2. Title Logic
+const pageTitle = title === site.name ? site.name : `${title} | ${site.name}`;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+
+<title>{pageTitle}</title>
+<meta name="title" content={pageTitle} />
+<meta name="description" content={description} />
+<meta name="author" content={site.author} />
+
+{
+  noindex ? (
+    <meta name="robots" content="noindex, nofollow" />
+  ) : (
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+  )
+}
+
+<link href={canonicalURL} rel="canonical" />
+<link href={canonicalURL} hreflang="en" rel="alternate" />
+<link href={canonicalURL} hreflang="x-default" rel="alternate" />
+<link href="/sitemap-index.xml" rel="sitemap" />
+
+<Favicons />
+<Socials
+  title={pageTitle}
+  type={type}
+  canonicalURL={canonicalURL}
+  description={description}
+  image={absoluteImageUrl}
+/>
+<Schema
+  title={pageTitle}
+  type={type}
+  canonicalURL={canonicalURL}
+  description={description}
+  image={absoluteImageUrl}
+  publishDate={publishDate}
+  updateDate={updateDate}
+/>

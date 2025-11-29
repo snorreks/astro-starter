@@ -1,12 +1,25 @@
 // prettier.config.ts
-import type { Config } from 'prettier'
+import type { Config } from 'prettier';
 
 const config: Config = {
   tabWidth: 2,
-  semi: false,
+  useTabs: false, // Google style uses spaces
+  semi: true,
   singleQuote: true,
-  printWidth: 120,
-  plugins: ['prettier-plugin-astro', 'prettier-plugin-css-order', 'prettier-plugin-tailwindcss'],
+  quoteProps: 'as-needed',
+  trailingComma: 'all', // "Next Gen" preference for git diff cleanliness
+  bracketSpacing: true,
+  arrowParens: 'always',
+  printWidth: 100, // 120 can be hard to read on split screens
+  endOfLine: 'lf',
+
+  // Plugins
+  plugins: [
+    'prettier-plugin-astro',
+    'prettier-plugin-css-order', // Strict CSS ordering
+    'prettier-plugin-tailwindcss', // Strict Class ordering
+  ],
+
   overrides: [
     {
       files: '*.astro',
@@ -15,6 +28,6 @@ const config: Config = {
       },
     },
   ],
-}
+};
 
-export default config
+export default config;

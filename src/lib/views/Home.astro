@@ -1,21 +1,10 @@
 ---
 // src/lib/views/Home.astro
-import type { ComponentProps } from 'astro/types'
-
-import About from '$components/blocks/About.astro'
-import Hero from '$components/blocks/Hero.astro'
-
-type Props = {
-  content: {
-    about: ComponentProps<typeof About>
-    hero: ComponentProps<typeof Hero>
-  }
-}
-
-const { content } = Astro.props
+import Cta from '$components/sections/Cta.astro';
+import Features from '$components/sections/Features.astro';
+import Hero from '$components/sections/Hero.astro';
 ---
 
-<main>
-  <Hero {...content.hero} />
-  <About {...content.about} />
-</main>
+<Hero />
+<Features />
+<Cta />

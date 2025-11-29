@@ -1,12 +1,12 @@
 // playwright.config.ts
-import { defineConfig, devices } from '@playwright/test'
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './test/e2e',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 4,
   reporter: 'html', // Generates a nice visual report
 
   use: {
@@ -36,4 +36,4 @@ export default defineConfig({
       use: { ...devices['Pixel 5'] },
     },
   ],
-})
+});

@@ -1,65 +1,88 @@
 ---
 // src/lib/components/layout/Navbar.astro
-import logo from '$assets/icons/logo.png'
-import LanguageSelector from '$components/layout/LanguageSelector.astro'
-import Picture from '$components/ui/Picture.astro'
-import { site } from '$data/site-content'
-import { getLangFromUrl, useTranslations } from '$utils/i18n'
-
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
+import logo from '$assets/icons/logo.png';
+import NavbarMenuItems from '$components/layout/NavbarMenuItems.astro';
+import ThemeToggle from '$components/layout/ThemeToggle.astro';
+import Picture from '$components/ui/Picture.astro';
 ---
 
-<header class="absolute inset-x-0 top-0 z-50">
-  <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
-    <div class="flex lg:flex-1">
-      <a href="/" title={`${site.name} Home`} class="-m-1.5 p-1.5">
-        <span class="sr-only">{site.name}</span>
-        <Picture src={logo} alt={`${site.name} Logo`} loading="eager" quality="low" class="h-8 w-auto" />
+<header
+  class="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/80 backdrop-blur-lg dark:border-zinc-800 dark:bg-zinc-950/80"
+>
+  <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-4">
+      <a href="/" class="flex items-center gap-2">
+        <Picture src={logo} alt="Homepage" loading="eager" class="h-8 w-8" />
+        <span class="font-bold">Astro</span>
       </a>
     </div>
 
-    <div class="hidden items-center lg:flex lg:gap-x-12">
-      <a
-        href="#services"
-        title={t('nav.services')}
-        class="text-sm leading-6 font-semibold text-gray-100 transition-colors hover:text-indigo-500"
-      >
-        {t('nav.services')}
-      </a>
-      <a
-        href="#about"
-        title={t('nav.about')}
-        class="text-sm leading-6 font-semibold text-gray-100 transition-colors hover:text-indigo-500"
-      >
-        {t('nav.about')}
-      </a>
-      <a
-        href="#contact"
-        title={t('nav.contact')}
-        class="text-sm leading-6 font-semibold text-gray-100 transition-colors hover:text-indigo-500"
-      >
-        {t('nav.contact')}
-      </a>
-      <LanguageSelector />
+    <div class="hidden items-center gap-6 lg:flex">
+      <ul class="flex items-center gap-6">
+        <NavbarMenuItems />
+      </ul>
     </div>
 
-    <div class="hidden gap-4 lg:flex lg:flex-1 lg:justify-end">
-      {
-        Object.values(site.social).map((socialUrl, index) => {
-          const platform = Object.keys(site.social)[index]
-          return (
-            <a
-              href={socialUrl}
-              target="_blank"
-              title={`Follow us on ${platform}`}
-              class="text-sm leading-6 font-semibold text-gray-100 capitalize transition-colors hover:text-indigo-500"
-            >
-              {platform} <span aria-hidden="true">&rarr;</span>
-            </a>
-          )
-        })
-      }
+    <div class="flex items-center gap-4">
+      <ThemeToggle />
+      <div class="lg:hidden">
+        <button
+          id="mobile-menu-button"
+          aria-label="Open menu"
+          class="inline-flex items-center justify-center rounded-md p-2 text-zinc-500 hover:bg-zinc-100 hover:text-zinc-600 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-300"
+        >
+          <svg
+            id="mobile-menu-icon-open"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+          >
+            <path
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+          <svg
+            id="mobile-menu-icon-close"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            class="hidden h-6 w-6"
+          >
+            <path
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-  </nav>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden">
+    <ul class="space-y-1 px-2 pt-2 pb-3">
+      <NavbarMenuItems />
+    </ul>
+  </div>
 </header>
+
+<script>
+  // src/lib/components/layout/Navbar.astro
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('mobile-menu-icon-open');
+    const iconClose = document.getElementById('mobile-menu-icon-close');
+
+    mobileMenuButton?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+      iconOpen?.classList.toggle('hidden');
+      iconClose?.classList.toggle('hidden');
+    });
+  });
+</script>

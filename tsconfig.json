@@ -1,8 +1,17 @@
 {
-  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "strictNullChecks": true,
     "baseUrl": "src",
+
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "verbatimModuleSyntax": true,
+    "jsx": "preserve",
+    "jsxImportSource": "astro",
     "paths": {
       "$assets/*": ["lib/assets/*"],
       "$components/*": ["lib/components/*"],
@@ -10,10 +19,22 @@
       "$layouts/*": ["lib/layouts/*"],
       "$styles/*": ["lib/styles/*"],
       "$utils/*": ["lib/utils/*"],
+      "$client/*": ["lib/client/*"],
       "$data/*": ["lib/data/*"],
       "$types": ["lib/types"]
     }
   },
-  "include": [".astro/types.d.ts", "src", "astro.config.ts", "eslint.config.ts", "prettier.config.ts"],
-  "exclude": ["dist"]
+  "exclude": ["dist", "node_modules"],
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    ".astro/types.d.ts",
+    "src",
+    "test",
+    "scripts",
+    "astro.config.ts",
+    "eslint.config.ts",
+    "prettier.config.ts",
+    "playwright.config.ts",
+    "commitlint.config.ts"
+  ]
 }

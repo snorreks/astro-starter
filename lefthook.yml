@@ -1,0 +1,12 @@
+# lefthook.yml
+pre-commit:
+  parallel: true
+  commands:
+    lint-staged:
+      glob: '*.{js,ts,cjs,mjs,jsx,tsx,astro,json,md}'
+      run: pnpm exec lint-staged
+
+commit-msg:
+  commands:
+    commitlint:
+      run: pnpm exec commitlint --edit {1}

@@ -1,0 +1,27 @@
+---
+// src/lib/components/layout/NavbarMenuItems.astro
+
+type MenuItem = {
+  href: string;
+  label: string;
+};
+
+const mainMenu: MenuItem[] = [
+  { label: 'Home', href: '/' },
+  { label: 'Contact', href: '/contact' },
+];
+---
+
+{
+  mainMenu.map((item) => (
+    <li>
+      <a
+        href={item.href}
+        aria-label={item.label}
+        class="block px-3 py-2 text-zinc-600 transition-colors duration-300 hover:text-zinc-900 lg:text-sm dark:text-zinc-400 dark:hover:text-zinc-50"
+      >
+        {item.label}
+      </a>
+    </li>
+  ))
+}

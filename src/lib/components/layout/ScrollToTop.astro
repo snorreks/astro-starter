@@ -1,0 +1,31 @@
+---
+/**
+ * "Scroll to top" button.
+ * Appears when the page is scrolled down.
+ */
+---
+
+<button
+  id="scrollToTopBtn"
+  title="Up"
+  aria-label="Scroll to top"
+  class="btn btn-circle btn-lg xl:btn-xl fixed right-6 bottom-10 z-1 hidden shadow-md"
+>
+  ↑
+</button>
+
+<script is:inline>
+  const btn = document.querySelector('#scrollToTopBtn');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      btn.classList.remove('hidden');
+      btn.classList.add('visible');
+    } else {
+      btn.classList.add('hidden');
+      btn.classList.remove('visible');
+    }
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>

@@ -1,0 +1,24 @@
+---
+// src/lib/components/sections/CTA.astro
+import Button from '$components/ui/Button.astro';
+---
+
+<section class="bg-white dark:bg-zinc-950">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <div class="rounded-lg bg-zinc-100 p-8 shadow-lg sm:p-12 dark:bg-zinc-800">
+      <div class="flex flex-col items-center justify-between gap-8 sm:flex-row">
+        <div class="text-center sm:text-left">
+          <h2 class="text-3xl font-extrabold text-zinc-900 dark:text-zinc-50">
+            Ready to get started?
+          </h2>
+          <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
+            Create an account today and start building faster websites.
+          </p>
+        </div>
+        <div class="flex-shrink-0">
+          <Button href="/contact" size="lg" style="primary"> Create an Account </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

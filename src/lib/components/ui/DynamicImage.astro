@@ -1,9 +1,9 @@
 ---
 // src/lib/components/ui/DynamicImage.astro
-import type { ImageMetadata, ImageQuality } from 'astro'
-import type { HTMLAttributes } from 'astro/types'
+import type { ImageMetadata, ImageQuality } from 'astro';
+import type { HTMLAttributes } from 'astro/types';
 
-import Picture from '$components/ui/Picture.astro'
+import Picture from '$components/ui/Picture.astro';
 
 /**
  * DynamicImage Component
@@ -13,55 +13,55 @@ type Props = HTMLAttributes<'img'> & {
   /**
    * The alt text for the image.
    */
-  alt: string
+  alt: string;
 
   /**
    * Whether to eager load the image.
    */
-  eager?: boolean
+  eager?: boolean;
 
   /**
    * The height of the image.
    */
-  height?: number
-
+  height?: number | `${number}`;
   /**
    * The quality of the image.
    */
-  quality?: ImageQuality
+  quality?: ImageQuality;
 
   /**
    * The path to the image within the `src/assets` directory.
    */
-  src: string
+  src: string;
 
   /**
    * The width of the image.
    */
-  width?: number
-}
+  width?: number | `${number}`;
+};
 
-const { alt, class: className, eager, src, quality, width, height, ...attrs } = Astro.props
+const { alt, class: className, eager, src, ...attrs } = Astro.props;
 
 // Import all images dynamically
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif,webp,avif,svg}')
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/**/*.{jpeg,jpg,png,gif,webp,avif,svg}',
+);
 
 // Construct the full path from the src
-const fullPath = `/src/assets/${src}`
+const fullPath = `/src/assets/${src}`;
 
 // Check if the image exists in our glob
 if (!images[fullPath]) {
-  throw new Error(`"${fullPath}" does not exist in glob: "/src/assets/**/*.{jpeg,jpg,png,gif,webp,avif,svg}"`)
+  throw new Error(
+    `"${fullPath}" does not exist in glob: "/src/assets/**/*.{jpeg,jpg,png,gif,webp,avif,svg}"`,
+  );
 }
 ---
 
 <Picture
-  width={width}
   src={(await images[fullPath]()).default}
   alt={alt}
-  height={height}
   loading={eager ? 'eager' : 'lazy'}
-  quality={quality}
   class={className}
   {...attrs}
 />

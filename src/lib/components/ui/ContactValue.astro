@@ -1,0 +1,40 @@
+---
+// src/lib/components/ui/ContactValue.astro
+/**
+ *
+ */
+type Props = {
+  label: string;
+  type: 'email' | 'tel' | 'address';
+  value: string;
+};
+
+const { type, value, label } = Astro.props;
+
+let href: string;
+switch (type) {
+  case 'email':
+    href = `mailto:${value}`;
+    break;
+  case 'tel':
+    href = `tel:${value}`;
+    break;
+  case 'address':
+    href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(value)}`;
+    break;
+}
+---
+
+<div class="flex items-start gap-4">
+  <span class="w-16 flex-shrink-0 text-sm font-semibold text-zinc-600 dark:text-zinc-400">
+    {label}
+  </span>
+  <a
+    href={href}
+    rel="noopener noreferrer"
+    target="_blank"
+    class="text-zinc-900 transition-colors duration-300 hover:text-zinc-700 dark:text-zinc-50 dark:hover:text-zinc-300"
+  >
+    {value}
+  </a>
+</div>

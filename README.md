@@ -17,13 +17,11 @@ This is a professional, scalable, and high-performance Astro starter template de
 - [Project Setup](#project-setup)
   - [1. Firebase Project](#1-firebase-project)
   - [2. Site Content](#2-site-content)
-  - [3. Branding](#3-branding)
-    - [Logo](#logo)
-    - [Favicons](#favicons)
-    - [Social Preview Image](#social-preview-image)
+  - [3. Branding and Assets](#3-branding-and-assets)
   - [4. Environment Variables](#4-environment-variables)
 - [Getting Started](#getting-started)
 - [Available Scripts](#available-scripts)
+- [Code Quality and Git Hooks](#code-quality-and-git-hooks)
 - [Testing](#testing)
 - [Building and Deploying](#building-and-deploying)
 - [CI/CD (GitHub Actions)](#cicd-github-actions)
@@ -70,22 +68,19 @@ This project is configured for deployment to Firebase Hosting.
 
 All site-specific data (like your name, social media links, and project details) is stored in `src/lib/data/site-content.ts`. Open this file and replace the placeholder values with your own information.
 
-### 3. Branding
+### 3. Branding and Assets
 
-#### Logo
+All public-facing assets (favicons, social images) are generated from source files in `src/lib/assets`.
 
-Create a `logo.png` file and place it in `src/lib/assets/icons/logo.png`.
+1.  **Logo:** Replace `src/lib/assets/icons/logo.png` with your own logo. This is the source for all generated favicons.
+2.  **Social Preview Image:** Replace `src/lib/assets/images/vibe.png` with your own social media preview image.
+3.  **Generate Assets:** Run the following command to generate all assets in the `public/` directory:
 
-#### Favicons
+    ```bash
+    pnpm generate
+    ```
 
-1. Go to a favicon generator service like [favicon.io](https://favicon.io/).
-2. Generate the favicons using your `logo.png`.
-3. Replace the existing favicon files in the `public/` directory with the newly generated ones.
-4. Update the `name` and `short_name` in `public/site.webmanifest` to match your website's name.
-
-#### Social Preview Image
-
-Create a `social_preview_image.jpg` (1200x630px is a good size) and place it in the `public/` directory. This image will be used for social media previews.
+The script `scripts/generate-public-assets.ts` will automatically create all necessary favicons, manifest files, and social images based on your source files.
 
 ### 4. Environment Variables
 
@@ -104,6 +99,8 @@ The project uses a `.env` file for environment variables.
     ```bash
     pnpm install
     ```
+
+    This will also install the Git hooks using Lefthook.
 
 2.  **Run the Development Server:**
     ```bash
@@ -130,10 +127,21 @@ The `package.json` file includes the following scripts:
 - `lint`: Lints the code using ESLint.
 - `format`: Formats the code using Prettier.
 - `test:e2e`: Runs end-to-end tests using Playwright.
+- `generate`: Generates all public assets from `src/lib/assets`.
 - `deploy`: Deploys the application to Firebase Hosting.
-- `build-deploy`: Builds and then deploys the application.
 - `fix`: Automatically formats, lints, and type-checks the code.
+- `fix:changed`: Formats and lints only the files that have changed.
 - `validate`: Runs all checks (Prettier, ESLint, Astro Check) without modifying files.
+
+## Code Quality and Git Hooks
+
+This project uses a combination of tools to ensure high code quality and consistent commit messages.
+
+- **Lefthook:** A Git hooks manager that runs checks before you commit and push. The configuration is in `lefthook.yml`. The hooks are automatically installed when you run `pnpm install`.
+- **Commitlint:** Enforces a conventional commit message format. The configuration is in `commitlint.config.ts`. This ensures a clean and readable Git history.
+- **lint-staged:** Runs ESLint and Prettier on your staged files before you commit. This prevents you from committing code that doesn't meet the style guidelines. The configuration is in `package.json`.
+
+These tools work together to automate code quality checks, making it easier to maintain a clean and consistent codebase.
 
 ## Testing
 
@@ -159,11 +167,9 @@ The application is configured for deployment to **Firebase Hosting**.
     pnpm deploy
     ```
 
-You can also run both steps with a single command: `pnpm build-deploy`.
-
 ## CI/CD (GitHub Actions)
 
-This project comes with a pre-configured GitHub Actions workflow located in .github/workflows/playwright.yml. It handles:
+This project comes with a pre-configured GitHub Actions workflow located in `.github/workflows/ci.yml`. It handles:
 
 1. Build Verification: Ensures the project compiles correctly.
 2. E2E Testing: Runs Playwright tests against the production build.
@@ -178,9 +184,9 @@ Since the build process requires environment variables (like Google Analytics), 
 3. Click New repository secret.
 4. Add the following secrets:
 
-- GOOGLE_ANALYTICS_ID: Your GA Measurement ID (e.g., G-XXXXXXX).
+- `GOOGLE_ANALYTICS_ID`: Your GA Measurement ID (e.g., G-XXXXXXX).
 
-  Note: If you add more environment variables to .env, remember to add them to GitHub Secrets and update the .github/workflows/playwright.yml file to expose them to the build step.
+  Note: If you add more environment variables to `.env`, remember to add them to GitHub Secrets and update the `.github/workflows/ci.yml` file to expose them to the build step.
 
 ## AI-Assisted Development with Gemini CLI
 
