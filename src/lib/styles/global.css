@@ -1,2 +1,87 @@
-/*src/lib/styles/global.css*/
 @import 'tailwindcss';
+
+/* 
+  Define the semantic names for Tailwind to pick up.
+  The actual color values are controlled by the CSS variables below.
+*/
+@theme {
+  --color-background: var(--app-background);
+  --color-foreground: var(--app-foreground);
+  --color-primary: var(--app-primary);
+  --color-primary-foreground: var(--app-primary-foreground);
+  --color-secondary: var(--app-secondary);
+  --color-secondary-foreground: var(--app-secondary-foreground);
+  --color-muted: var(--app-muted);
+  --color-muted-foreground: var(--app-muted-foreground);
+  --color-accent: var(--app-accent);
+  --color-accent-foreground: var(--app-accent-foreground);
+  --color-destructive: var(--app-destructive);
+  --color-destructive-foreground: var(--app-destructive-foreground);
+  --color-border: var(--app-border);
+  --color-input: var(--app-input);
+  --color-ring: var(--app-ring);
+  --color-card: var(--app-card);
+  --color-card-foreground: var(--app-card-foreground);
+  --color-popover: var(--app-popover);
+  --color-popover-foreground: var(--app-popover-foreground);
+  --radius: 0.5rem;
+}
+
+/*
+  Define the actual color values for light and dark themes.
+  These are standard CSS variables.
+*/
+@layer base {
+  :root {
+    --app-background: oklch(100% 0 0); /* White */
+    --app-foreground: oklch(24.9% 0.012 263.43); /* Almost Black */
+    --app-card: oklch(100% 0 0);
+    --app-card-foreground: oklch(24.9% 0.012 263.43);
+    --app-popover: oklch(100% 0 0);
+    --app-popover-foreground: oklch(24.9% 0.012 263.43);
+    --app-primary: oklch(24.9% 0.012 263.43);
+    --app-primary-foreground: oklch(98% 0 0);
+    --app-secondary: oklch(95.9% 0.003 264.41);
+    --app-secondary-foreground: oklch(24.9% 0.012 263.43);
+    --app-muted: oklch(95.9% 0.003 264.41);
+    --app-muted-foreground: oklch(46.1% 0.008 261.35);
+    --app-accent: oklch(95.9% 0.003 264.41);
+    --app-accent-foreground: oklch(24.9% 0.012 263.43);
+    --app-destructive: oklch(60.2% 0.224 19.3);
+    --app-destructive-foreground: oklch(98% 0 0);
+    --app-border: oklch(90% 0.005 264.41); /* Light Gray */
+    --app-input: oklch(90% 0.005 264.41);
+    --app-ring: oklch(24.9% 0.012 263.43);
+  }
+
+  .dark {
+    --app-background: oklch(24.9% 0.012 263.43); /* Almost Black */
+    --app-foreground: oklch(98% 0 0); /* Almost White */
+    --app-card: oklch(24.9% 0.012 263.43);
+    --app-card-foreground: oklch(98% 0 0);
+    --app-popover: oklch(24.9% 0.012 263.43);
+    --app-popover-foreground: oklch(98% 0 0);
+    --app-primary: oklch(98% 0 0);
+    --app-primary-foreground: oklch(24.9% 0.012 263.43);
+    --app-secondary: oklch(15.9% 0.006 264.21);
+    --app-secondary-foreground: oklch(98% 0 0);
+    --app-muted: oklch(15.9% 0.006 264.21);
+    --app-muted-foreground: oklch(64.9% 0.005 263.88);
+    --app-accent: oklch(15.9% 0.006 264.21);
+    --app-accent-foreground: oklch(98% 0 0);
+    --app-destructive: oklch(30.6% 0.165 20.81);
+    --app-destructive-foreground: oklch(98% 0 0);
+    --app-border: oklch(15.9% 0.006 264.21); /* Dark Gray */
+    --app-input: oklch(15.9% 0.006 264.21);
+    --app-ring: oklch(98% 0 0);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+  * {
+    @apply border-border;
+  }
+}

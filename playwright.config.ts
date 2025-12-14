@@ -18,7 +18,7 @@ export default defineConfig({
 
   // Auto-start your Astro server before running tests
   webServer: {
-    command: 'pnpm run preview', // Uses the production build (more accurate)
+    command: process.env.CI ? 'pnpm run preview' : 'pnpm run dev', // Uses the production build (more accurate)
     url: 'http://localhost:4321',
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000,

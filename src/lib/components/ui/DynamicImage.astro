@@ -1,46 +1,28 @@
 ---
 // src/lib/components/ui/DynamicImage.astro
-import type { ImageMetadata, ImageQuality } from 'astro';
-import type { HTMLAttributes } from 'astro/types';
+import type { ImageMetadata } from 'astro';
+import type { ComponentProps } from 'astro/types';
 
 import Picture from '$components/ui/Picture.astro';
+import { Picture as PictureComponent } from 'astro:assets';
 
 /**
- * DynamicImage Component
- * @description A component to dynamically import and display images from the assets folder.
+ * A component to dynamically import and display images from the assets folder.
+ * It uses the Astro `Picture` component to serve optimized images.
  */
-type Props = HTMLAttributes<'img'> & {
+type Props = ComponentProps<typeof PictureComponent> & {
   /**
-   * The alt text for the image.
+   * The alt text for the image. Required.
    */
   alt: string;
 
   /**
-   * Whether to eager load the image.
-   */
-  eager?: boolean;
-
-  /**
-   * The height of the image.
-   */
-  height?: number | `${number}`;
-  /**
-   * The quality of the image.
-   */
-  quality?: ImageQuality;
-
-  /**
-   * The path to the image within the `src/assets` directory.
+   * The path to the image within the `src/assets` directory. Required.
    */
   src: string;
-
-  /**
-   * The width of the image.
-   */
-  width?: number | `${number}`;
 };
 
-const { alt, class: className, eager, src, ...attrs } = Astro.props;
+const { class: className, src, ...attrs } = Astro.props;
 
 // Import all images dynamically
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -58,10 +40,4 @@ if (!images[fullPath]) {
 }
 ---
 
-<Picture
-  src={(await images[fullPath]()).default}
-  alt={alt}
-  loading={eager ? 'eager' : 'lazy'}
-  class={className}
-  {...attrs}
-/>
+<Picture src={(await images[fullPath]()).default} class={className} {...attrs} />

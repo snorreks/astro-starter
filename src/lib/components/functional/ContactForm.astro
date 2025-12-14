@@ -1,9 +1,18 @@
 ---
 /**
- *
+ * Renders a contact form with a title, description, and various input fields.
+ * This is a functional component that includes form handling logic.
  */
 type Props = {
+  /**
+   * A short description displayed above the form.
+   * @default "Fill out the form and we'll get back to you as soon as possible"
+   */
   description?: string;
+  /**
+   * The title of the contact form section.
+   * @default 'Contact us'
+   */
   title?: string;
 };
 
@@ -15,32 +24,46 @@ const {
 // Get URL parameters to show the result
 const sent = Astro.url.searchParams.get('sent') === 'true';
 const error = Astro.url.searchParams.get('error');
+
+const inputClasses =
+  'flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
+const textareaClasses =
+  'min-h-[80px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
+const checkboxClasses =
+  'h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground';
+const buttonClasses =
+  'inline-flex items-center justify-center rounded-md font-semibold whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full';
 ---
 
 <section class="container mx-auto pb-12">
   <div class="mb-8 text-center">
     <h2 class="mt-2 mb-2 text-3xl font-bold">{title}</h2>
-    <p class="text-base-content/70">{description}</p>
+    <p class="text-muted-foreground">{description}</p>
     <!-- Demo notice -->
-    <div role="alert" class="alert alert-info alert-soft">
-      <svg
-        fill="none"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6 shrink-0 stroke-current"
-      >
-        <path
-          stroke-width="2"
-          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
-      <div>
-        <h4 class="text-info mt-0">Demo Mode</h4>
-        <span
-          >This contact form is for demonstration purposes only. Messages are not actually sent or
-          stored.</span
+    <div
+      role="alert"
+      class="mt-4 rounded-lg border border-blue-500/50 bg-blue-900/20 p-4 text-blue-400"
+    >
+      <div class="flex items-start gap-3">
+        <svg
+          fill="none"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 shrink-0 stroke-current"
         >
+          <path
+            stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+        <div class="text-left">
+          <h4 class="font-semibold text-blue-300">Demo Mode</h4>
+          <span
+            >This contact form is for demonstration purposes only. Messages are not actually sent or
+            stored.</span
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -48,21 +71,23 @@ const error = Astro.url.searchParams.get('error');
   <!-- Success message -->
   {
     sent && (
-      <div class="alert alert-success mb-6">
-        <svg
-          fill="none"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 shrink-0 stroke-current"
-        >
-          <path
-            stroke-width="2"
-            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <span>Message sent successfully!</span>
+      <div class="mb-6 rounded-lg border border-green-500/50 bg-green-900/20 p-4 text-green-400">
+        <div class="flex items-start gap-3">
+          <svg
+            fill="none"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 shrink-0 stroke-current"
+          >
+            <path
+              stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Message sent successfully!</span>
+        </div>
       </div>
     )
   }
@@ -70,39 +95,40 @@ const error = Astro.url.searchParams.get('error');
   <!-- Error message -->
   {
     error && (
-      <div class="alert alert-error mb-6">
-        <svg
-          fill="none"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 shrink-0 stroke-current"
-        >
-          <path
-            stroke-width="2"
-            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <span>
-          {error === 'missing' && 'Please fill in all required fields.'}
-          {error === 'invalid' && 'Please check your email address.'}
-          {!['missing', 'invalid'].includes(error) && 'An error occurred. Please try again.'}
-        </span>
+      <div class="mb-6 rounded-lg border border-red-500/50 bg-red-900/20 p-4 text-red-400">
+        <div class="flex items-start gap-3">
+          <svg
+            fill="none"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 shrink-0 stroke-current"
+          >
+            <path
+              stroke-width="2"
+              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>
+            {error === 'missing' && 'Please fill in all required fields.'}
+            {error === 'invalid' && 'Please check your email address.'}
+            {!['missing', 'invalid'].includes(error) && 'An error occurred. Please try again.'}
+          </span>
+        </div>
       </div>
     )
   }
 
-  <!-- Demo form with DaisyUI Validator (without JavaScript validation) -->
   <form id="demo-form" class="space-y-6">
-    <!-- Personal Information Fieldset -->
-    <fieldset class="fieldset mb-0">
-      <legend class="fieldset-legend">Personal Information</legend>
-
+    <div class="space-y-4">
       <!-- Name -->
-      <div class="form-control">
-        <label for="name" class="label">
-          <span class="label-text">Full Name *</span>
+      <div>
+        <label
+          for="name"
+          class="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >
+          Full Name *
         </label>
         <input
           id="name"
@@ -113,15 +139,17 @@ const error = Astro.url.searchParams.get('error');
           minlength="2"
           placeholder="Enter your full name"
           required
-          class="input input-bordered validator w-full"
+          class={inputClasses}
         />
-        <div class="validator-hint my-0">Enter valid full name</div>
       </div>
 
       <!-- Email -->
-      <div class="form-control">
-        <label for="e-mail" class="label">
-          <span class="label-text">Email Address *</span>
+      <div>
+        <label
+          for="e-mail"
+          class="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >
+          Email Address *
         </label>
         <input
           id="e-mail"
@@ -130,15 +158,17 @@ const error = Astro.url.searchParams.get('error');
           autocomplete="email"
           placeholder="your.email@example.com"
           required
-          class="input input-bordered validator w-full"
+          class={inputClasses}
         />
-        <div class="validator-hint my-0">Enter valid email address</div>
       </div>
 
       <!-- Phone -->
-      <div class="form-control">
-        <label for="phone-number" class="label">
-          <span class="label-text">Phone Number</span>
+      <div>
+        <label
+          for="phone-number"
+          class="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >
+          Phone Number <span class="text-muted-foreground">(Optional)</span>
         </label>
         <input
           id="phone-number"
@@ -146,48 +176,39 @@ const error = Astro.url.searchParams.get('error');
           type="tel"
           autocomplete="tel"
           minlength="8"
-          pattern="[\+]?[0-9\s\-\(\)]+"
+          pattern="[\+]?[0-9\s\-\( \)]+"
           placeholder="+380 XX XXX XX XX"
-          class="input input-bordered validator w-full"
+          class={inputClasses}
         />
-        <div class="label">
-          <span class="label-text-alt">Optional</span>
-        </div>
-        <div class="validator-hint my-0">Must be minimum 8 digits</div>
       </div>
-    </fieldset>
+    </div>
 
-    <!-- Message Details Fieldset -->
-    <fieldset class="fieldset mb-0">
-      <legend class="fieldset-legend">Message Details</legend>
-
+    <div class="space-y-4">
       <!-- Subject -->
-      <div class="form-control">
-        <label for="subject" class="label">
-          <span class="label-text">Subject</span>
-        </label>
-        <select
-          id="subject"
-          name="subject"
-          autocomplete="off"
-          class="select select-bordered w-full"
+      <div>
+        <label
+          for="subject"
+          class="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
-          <option value="">Select subject (optional)</option>
+          Subject <span class="text-muted-foreground">(Optional)</span>
+        </label>
+        <select id="subject" name="subject" autocomplete="off" class={inputClasses}>
+          <option value="">Select subject</option>
           <option value="general">General question</option>
           <option value="support">Technical support</option>
           <option value="business">Business proposal</option>
           <option value="feedback">Feedback</option>
           <option value="other">Other</option>
         </select>
-        <div class="label">
-          <span class="label-text-alt">Optional</span>
-        </div>
       </div>
 
       <!-- Message -->
-      <div class="form-control">
-        <label for="message" class="label">
-          <span class="label-text">Message *</span>
+      <div>
+        <label
+          for="message"
+          class="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >
+          Message *
         </label>
         <textarea
           id="message"
@@ -197,39 +218,29 @@ const error = Astro.url.searchParams.get('error');
           minlength="10"
           placeholder="Enter your message..."
           required
-          class="textarea textarea-bordered validator h-32 w-full"></textarea>
-        <div class="label">
-          <span class="label-text-alt">Min 10 characters, max 1000</span>
-        </div>
-        <div class="validator-hint my-0">Enter valid message</div>
+          class={textareaClasses}></textarea>
+        <p class="text-muted-foreground text-sm">Min 10 characters, max 1000</p>
       </div>
-    </fieldset>
+    </div>
 
-    <!-- Privacy & Consent Fieldset -->
-    <fieldset class="fieldset mb-0">
-      <legend class="fieldset-legend sr-only">Privacy & Consent</legend>
-
+    <div class="space-y-4">
       <!-- Consent -->
-      <div class="form-control">
-        <label for="consent" class="label cursor-pointer justify-start gap-3">
-          <input
-            id="consent"
-            name="consent"
-            type="checkbox"
-            required
-            class="checkbox checkbox-soft validator"
-          />
-          <span class="label-text">
-            I agree to the <a href="/privacy" class="link">processing of personal data</a> *
-          </span>
-          <div class="validator-hint">Required</div>
+      <div class="flex items-center space-x-2">
+        <input id="consent" name="consent" type="checkbox" required class={checkboxClasses} />
+        <label
+          for="consent"
+          class="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >
+          I agree to the <a href="/privacy" class="text-primary underline-offset-4 hover:underline"
+            >processing of personal data</a
+          > *
         </label>
       </div>
-    </fieldset>
+    </div>
 
     <!-- Submit button -->
-    <div class="form-control pt-4">
-      <button id="submit-btn" type="submit" class="btn btn-soft btn-block">
+    <div class="pt-4">
+      <button id="submit-btn" type="submit" class={buttonClasses}>
         <svg
           fill="none"
           stroke="currentColor"
@@ -249,23 +260,28 @@ const error = Astro.url.searchParams.get('error');
   </form>
 
   <!-- Demo success message (hidden by default) -->
-  <div id="demo-success" style="display: none;" class="alert alert-success mb-6">
-    <svg
-      fill="none"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-6 w-6 shrink-0 stroke-current"
-    >
-      <path
-        stroke-width="2"
-        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-        stroke-linecap="round"
-        stroke-linejoin="round"></path>
-    </svg>
-    <span>Demo: Message would be sent successfully! (This is just a demonstration)</span>
+  <div
+    id="demo-success"
+    style="display: none;"
+    class="mb-6 rounded-lg border border-green-500/50 bg-green-900/20 p-4 text-green-400"
+  >
+    <div class="flex items-start gap-3">
+      <svg
+        fill="none"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 shrink-0 stroke-current"
+      >
+        <path
+          stroke-width="2"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+      <span>Demo: Message would be sent successfully! (This is just a demonstration)</span>
+    </div>
   </div>
 </section>
-
 <script>
   // Demo form handling (only for demonstration, not for validation)
   document.addEventListener('DOMContentLoaded', () => {

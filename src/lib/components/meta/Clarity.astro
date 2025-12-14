@@ -1,9 +1,11 @@
 ---
 // src/lib/components/base/Clarity.astro
 /**
- *
+ * Integrates Microsoft Clarity for website analytics and session recording.
+ * This script is loaded using Partytown to avoid blocking the main thread.
  */
 type Props = {
+  /** The Microsoft Clarity project ID. Required. */
   id: string;
 };
 

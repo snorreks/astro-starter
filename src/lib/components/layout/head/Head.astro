@@ -7,15 +7,41 @@ import Schema from './Schema.astro';
 import Socials from './Socials.astro';
 
 /**
- *
+ * Manages the document head, including meta tags for SEO, social media, and other metadata.
  */
 type Props = {
+  /**
+   * Meta description for SEO.
+   * @default `site.description`
+   */
   description?: string;
+  /**
+   * The image to use for social media previews.
+   * @default '/images/site_image.jpg'
+   */
   image?: string;
+  /**
+   * If true, adds a "noindex, nofollow" robots meta tag.
+   * @default false
+   */
   noindex?: boolean;
+  /**
+   * The publication date of the page, used for schema markup.
+   */
   publishDate?: string;
+  /**
+   * The document title for SEO.
+   * @default `site.name`
+   */
   title?: string;
+  /**
+   * The type of page, used for social media and schema markup.
+   * @default 'website'
+   */
   type?: 'website' | 'article';
+  /**
+   * The last update date of the page, used for schema markup.
+   */
   updateDate?: string;
 };
 
@@ -39,6 +65,22 @@ const canonicalURL = new URL(Astro.url.pathname, siteUrl).toString();
 // 2. Title Logic
 const pageTitle = title === site.name ? site.name : `${title} | ${site.name}`;
 ---
+
+<script is:inline>
+  // This script is inlined in the <head> to prevent FOUC.
+  // It checks local storage and the user's OS preference to set the theme.
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme');
+    }
+    if (globalThis.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
+  })();
+
+  document.documentElement.classList.toggle('dark', !(theme === 'light'));
+</script>
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />

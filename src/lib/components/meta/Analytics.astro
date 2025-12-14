@@ -3,9 +3,11 @@
 //
 // https://daniel.es/blog/the-ultimate-astro-google-analytics-guide/
 /**
- *
+ * Integrates Google Analytics into the site.
+ * It includes the gtag.js script and configures it to be GDPR compliant.
  */
 type Props = {
+  /** The Google Analytics measurement ID. Required. */
   id: string;
 };
 

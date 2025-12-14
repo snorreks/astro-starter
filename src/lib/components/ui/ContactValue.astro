@@ -1,11 +1,15 @@
 ---
 // src/lib/components/ui/ContactValue.astro
 /**
- *
+ * Renders a contact detail (e.g., email, phone, address) with a label and a link.
+ * The link is automatically generated based on the `type` of contact.
  */
 type Props = {
+  /** The label for the contact detail (e.g., "Email", "Phone"). Required. */
   label: string;
+  /** The type of contact, which determines the link format. Required. */
   type: 'email' | 'tel' | 'address';
+  /** The contact value (e.g., the email address or phone number). Required. */
   value: string;
 };
 
@@ -26,14 +30,14 @@ switch (type) {
 ---
 
 <div class="flex items-start gap-4">
-  <span class="w-16 flex-shrink-0 text-sm font-semibold text-zinc-600 dark:text-zinc-400">
+  <span class="text-muted-foreground w-16 flex-shrink-0 text-sm font-semibold">
     {label}
   </span>
   <a
     href={href}
     rel="noopener noreferrer"
     target="_blank"
-    class="text-zinc-900 transition-colors duration-300 hover:text-zinc-700 dark:text-zinc-50 dark:hover:text-zinc-300"
+    class="text-foreground hover:text-muted-foreground transition-colors duration-300"
   >
     {value}
   </a>

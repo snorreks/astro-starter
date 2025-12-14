@@ -1,31 +1,30 @@
 ---
 // src/lib/components/sections/Features.astro
+
 const features = [
   {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-zinc-500"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>`,
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-primary"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>`,
     title: 'Component-Based',
     description: 'Build your site with reusable components from your favorite frameworks.',
   },
   {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-zinc-500"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>`,
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-primary"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>`,
     title: 'Zero JS by Default',
     description: 'Astro renders your site to static HTML, removing all JavaScript by default.',
   },
   {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-zinc-500"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path></svg>`,
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-primary"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path></svg>`,
     title: 'On-Demand Islands',
     description: 'Load interactive components only when they become visible on the page.',
   },
 ];
 ---
 
-<section class="bg-zinc-50 dark:bg-zinc-900">
+<section class="bg-secondary">
   <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
     <div class="text-center">
-      <h2 class="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
-        Why Astro?
-      </h2>
-      <p class="mx-auto mt-4 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
+      <h2 class="text-foreground text-3xl font-extrabold tracking-tight">Why Astro?</h2>
+      <p class="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
         Discover the features that make Astro the best choice for your next project.
       </p>
     </div>
@@ -33,11 +32,11 @@ const features = [
       {
         features.map((feature) => (
           <div class="flex flex-col items-center text-center">
-            <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white dark:bg-zinc-800">
+            <div class="bg-card flex h-16 w-16 items-center justify-center rounded-full">
               <Fragment set:html={feature.icon} />
             </div>
-            <h3 class="mt-6 text-xl font-bold text-zinc-900 dark:text-zinc-50">{feature.title}</h3>
-            <p class="mt-2 text-base text-zinc-600 dark:text-zinc-400">{feature.description}</p>
+            <h3 class="text-foreground mt-6 text-xl font-bold">{feature.title}</h3>
+            <p class="text-muted-foreground mt-2 text-base">{feature.description}</p>
           </div>
         ))
       }

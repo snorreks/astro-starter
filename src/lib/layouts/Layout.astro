@@ -11,39 +11,61 @@ import { site } from '$data/site-content';
 import { GOOGLE_ANALYTICS_ID, MICROSOFT_CLARITY_ID } from 'astro:env/client';
 
 /**
- *
+ * Base layout component for all pages.
+ * It includes the head, navbar, footer, and other meta components.
  */
 type Props = {
   /**
    * Meta description for SEO.
+   * @default `site.description`
    */
   description?: string;
+  /**
+   * The image to use for social media previews.
+   * @default `site.image`
+   */
   image?: string;
+  /**
+   * Whether to enable Pagefind for this page.
+   * @default true
+   */
   pagefind?: boolean;
 
   /**
+   * The theme of the page.
+   * @default 'light'
+   */
+  theme?: 'light' | 'dark';
+  /**
    * The document title for SEO.
+   * @default `site.name`
    */
   title?: string;
 };
 
-const { pagefind = true, title = site.name, description = site.description, image } = Astro.props;
+const {
+  pagefind = true,
+  title = site.name,
+  description = site.description,
+  image,
+  theme = 'light',
+} = Astro.props;
+
+const themeClasses = {
+  light: 'bg-background text-foreground',
+  dark: 'bg-zinc-900 text-white',
+};
 ---
 
 <!doctype html>
-<html
-  lang="en"
-  class={`scrollbar-thumb-${site.colors.secondaryHover} scrollbar-track-${site.colors.background} h-full scroll-smooth bg-${site.colors.background}`}
->
+<html lang="en" class="h-full scroll-smooth">
   <head>
     <Head title={title} description={description.slice(0, 100)} image={image} />
     {import.meta.env.PROD && GOOGLE_ANALYTICS_ID && <Analytics id={GOOGLE_ANALYTICS_ID} />}
     {import.meta.env.PROD && MICROSOFT_CLARITY_ID && <Clarity id={MICROSOFT_CLARITY_ID} />}
   </head>
 
-  <body
-    class="flex min-h-dvh flex-col bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-50"
-  >
+  <body class:list={[themeClasses[theme], 'flex min-h-dvh flex-col antialiased']}>
     <Navbar />
 
     <main class="flex-1" {...pagefind ? { 'data-pagefind-body': '' } : {}}>

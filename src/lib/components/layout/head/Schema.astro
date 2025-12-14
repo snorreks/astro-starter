@@ -3,15 +3,23 @@
 import { site } from '$data/site-content';
 
 /**
- *
+ * Generates JSON-LD schema markup for SEO purposes.
+ * This helps search engines understand the content and context of the page.
  */
 type Props = {
+  /** The canonical URL of the page. Required. */
   canonicalURL: string;
+  /** The meta description of the page. Required. */
   description: string;
+  /** The main image for the page. Required. */
   image: string;
+  /** The publication date of the article. Required for 'article' type. */
   publishDate?: string;
+  /** The title of the page. Required. */
   title: string;
+  /** The type of page. Required. */
   type: 'website' | 'article';
+  /** The last update date of the article. */
   updateDate?: string;
 };
 

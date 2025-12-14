@@ -40,16 +40,21 @@ src/
 </architecture_context>
 
 <code_governance>
-<syntax_rules> - **File Headers**: MUST start with `// relative/path/to/file.ts`. - **Functions**: NO `function` keyword. Use `const` arrow functions. - **Types**: - NO `interface`. ALWAYS use `type`. - NO `enum`. Use `as const` objects or Union types. - NO `any`. - **Avoid `unknown`**: Use Generics `<T>`, Discriminated Unions, or Zod schemas. - **Scripts**: All `<script>` tags must use TypeScript (no `.js` files in `src`). - **Docs**: Strict JSDoc mandatory for all exported functions/props. JSDoc MUST be attached to `type Props` in astro files to ensure IDE tooltips work.
-</syntax_rules>
+<syntax_rules> - **File Headers**: MUST start with `// relative/path/to/file.ts`. - **Functions**: NO `function` keyword. Use `const` arrow functions. - **Types**: - NO `interface`. ALWAYS use `type`. - NO `enum`. Use `as const` objects or Union types. - NO `any`. - **Avoid `unknown`**: Use Generics `<T>`, Discriminated Unions, or Zod schemas. - **Scripts**: All `<script>` tags must use TypeScript (no `.js` files in `src`). - **Astro Component Docs**:
 
-    <design_system name="Modern Minimalist (Refined)">
-      - **Philosophy**: Clean, content-first, subtle depth. Vercel/shadcn aesthetic.
-      - **Tailwind v4**: Use CSS variables and logical properties.
-      - **Surfaces**: `bg-white` (Light) / `bg-zinc-950` (Dark).
-      - **Borders**: Subtle separation (`border-zinc-200` / `border-zinc-800`).
-      - **Motion**: `transition-all duration-300 ease-out`.
-    </design_system>
+- All Astro components (`.astro` files) MUST define a `type Props`.
+- A JSDoc block is MANDATORY above `type Props`. This block MUST explain the component's purpose and usage.
+- For components with props, each property in the `type Props` definition MUST have its own JSDoc comment.
+- Each prop's JSDoc MUST describe the prop, state if it is required, and specify its default value if one exists.
+  </syntax_rules>
+
+      <design_system name="Modern Minimalist (Refined)">
+        - **Philosophy**: Clean, content-first, subtle depth. Vercel/shadcn aesthetic.
+        - **Tailwind v4**: Use CSS variables and logical properties.
+        - **Surfaces**: `bg-white` (Light) / `bg-zinc-950` (Dark).
+        - **Borders**: Subtle separation (`border-zinc-200` / `border-zinc-800`).
+        - **Motion**: `transition-all duration-300 ease-out`.
+      </design_system>
 
 </code_governance>
 

@@ -6,10 +6,24 @@ import type { ComponentProps } from 'astro/types';
 import { Picture as PictureComponent } from 'astro:assets';
 
 /**
- *
+ * A wrapper around the built-in Astro `Picture` component.
+ * It provides default values for `quality` and `formats`.
  */
 type Props = ComponentProps<typeof PictureComponent> & {
+  /**
+   * The alt text for the image. Required.
+   */
   alt: string;
+  /**
+   * The formats to generate for the image.
+   * @default ['avif', 'webp']
+   */
+  formats?: ('avif' | 'jpeg' | 'png' | 'svg' | 'webp' | 'gif')[];
+  /**
+   * The quality of the image.
+   * @default 80
+   */
+  quality?: number | 'low' | 'mid' | 'high' | 'max';
 };
 
 const { quality = 80, formats = ['avif', 'webp'], ...rest } = Astro.props;

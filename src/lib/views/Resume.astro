@@ -1,0 +1,106 @@
+---
+// src/lib/views/Resume.astro
+
+const skills = {
+  'Cloud & DevOps': ['GCP', 'AWS', 'Azure', 'ffmpeg', 'lambda', 'cloud run', 'vm', 'docker'],
+  Frontend: ['svelte', 'typescript', 'dart', 'flutter', 'vue', 'react', 'react native'],
+  Backend: ['kotlin', 'java', 'swift', 'rust'],
+  'Data & SEO': ['firebase', 'supabase', 'SEO'],
+  'Game Dev & AI': ['Godot', 'AI stuff'],
+} as const;
+---
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>
+
+<div class="container mx-auto p-8">
+  <header class="mb-12 text-center">
+    <h1 class="floating text-5xl font-bold tracking-wider text-cyan-400">10x Programmer</h1>
+    <p class="mt-2 text-xl text-zinc-400">Digital Craftsman & Problem Solver</p>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="mb-6 border-b-2 border-cyan-400 pb-2 text-3xl font-bold text-zinc-300">Summary</h2>
+    <p class="leading-relaxed text-zinc-400">
+      A highly efficient and results-driven programmer with a proven track record of delivering
+      high-quality software solutions. I thrive in complex and challenging environments,
+      consistently delivering 10x value by writing clean, scalable, and maintainable code. My
+      passion for technology and continuous learning allows me to adapt to new stacks and paradigms
+      with ease.
+    </p>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="mb-6 border-b-2 border-cyan-400 pb-2 text-3xl font-bold text-zinc-300">Skills</h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {
+        Object.entries(skills).map(([category, skillList]) => (
+          <div class="rounded-lg bg-zinc-800 p-6 shadow-lg transition-shadow duration-300 hover:shadow-cyan-400/20">
+            <h3 class="mb-4 text-xl font-semibold text-cyan-400">{category}</h3>
+            <ul class="flex flex-wrap gap-2">
+              {skillList.map((skill) => (
+                <li class="rounded-full bg-zinc-700 px-3 py-1 text-sm text-zinc-300">{skill}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="mb-6 border-b-2 border-cyan-400 pb-2 text-3xl font-bold text-zinc-300">
+      Experience
+    </h2>
+    <div class="relative ml-4 border-l-2 border-cyan-400 pl-8">
+      <div class="mb-8">
+        <div class="absolute -left-2.5 h-4 w-4 rounded-full border-2 border-zinc-900 bg-cyan-400">
+        </div>
+        <h3 class="text-xl font-semibold text-zinc-300">Lead Architect - Innovate Corp</h3>
+        <p class="mb-2 text-sm text-zinc-500">2020 - Present</p>
+        <p class="text-zinc-400">
+          Architected and led the development of a serverless, event-driven platform handling
+          millions of requests per day. Optimized cloud infrastructure, resulting in a 60% reduction
+          in costs while improving performance by 200%.
+        </p>
+      </div>
+      <div class="mb-8">
+        <div class="absolute -left-2.5 h-4 w-4 rounded-full border-2 border-zinc-900 bg-cyan-400">
+        </div>
+        <h3 class="text-xl font-semibold text-zinc-300">
+          Senior Software Engineer - Tech Solutions
+        </h3>
+        <p class="mb-2 text-sm text-zinc-500">2018 - 2020</p>
+        <p class="text-zinc-400">
+          Developed and maintained a large-scale e-commerce platform using React and Node.js.
+          Implemented a micro-frontend architecture that improved developer velocity by 30%.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="mb-6 border-b-2 border-cyan-400 pb-2 text-3xl font-bold text-zinc-300">Education</h2>
+    <div class="rounded-lg bg-zinc-800 p-6 shadow-lg">
+      <h3 class="text-xl font-semibold text-cyan-400">Self-Taught & Battle-Tested</h3>
+      <p class="mt-2 text-zinc-400">
+        My knowledge is forged in the fires of real-world projects and a relentless pursuit of
+        excellence.
+      </p>
+    </div>
+  </section>
+</div>
